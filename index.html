@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MittDokument</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+  <!-- Top Section -->
+  <div class="topcontainer">
+    <div class="top-left-item"><img src="Nettsidelogo.png" alt="Nettsidelogo" class="png"><h1>PINMAP</h1></div>
+    <div class="top-item">News</div>
+    <div class="top-item">Gigs</div>
+    <div class="top-item">Store</div>
+    <div class="top-item">Bio</div>
+    <div class="top-item">Test</div>
+    <div class="top-item">Test</div>
+  </div>
+
+  <!-- Middle Section -->
+   <div class="midcontainer">
+    <div class="mid-item"></div>
+    <div class="mid-item">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h2 class="mb-0"> </h2>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+      <div id="map"></div>
+    </div>
+    <div class="mid-item"></div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer bg-light">
+    <div class="footer-item">Boks1</div>
+    <div class="footer-item">Boks2</div>
+    <div class="footer-item">Boks3</div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize map centered on Bragernes Torg, Drammen
+    var map = L.map('map').setView([59.744263, 10.204786], 16);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add a marker for Bragernes Torg
+    L.marker([59.744263, 10.204786]).addTo(map)
+      .bindPopup('Bragernes Torg 🏙️')
+      .openPopup();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.topcontainer {
+display: flex;
+align-items: center;
+justify-content: flex-start; /* start fra venstre */
+height: 175px;
+width: 100%;
+padding: 0 2rem; /* mindre padding for testing */
+background-color: rgba(0, 0, 0, 0);
+box-sizing: border-box;
+}   
+
+.top-left-item {
+ margin-right: auto; /* SKYVER resten til høyre */
+ align-items: top;
+}
+
+.png {
+  display: inline-block;
+  width: 100px;
+  height: auto;
+}
+
+.top-item {
+ padding: 0 15px;
+ color: rgb(0, 0, 0);
+ font-size: 1rem;
+ cursor: pointer;
+ gap: 20px;
+}
+
+
+.top-item:hover {
+  opacity: 0.7;                 /*  adds subtle hover effect */
+}
+    /*---------------------------------*/
+    /* Midten, med kart og shit        */
+    /*---------------------------------*/
+    
+    .midcontainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem;
+      background-color: rgb(231, 231, 231);
+      border-radius: 3%;
+    }
+
+    #map {
+      height: 550px;   
+      width: 1300px;
+      border-radius: 8px;
+    }
+
+    /*-----------------------------------*/
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .top-item, .mid-item, .footer-item {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem;
+    }
